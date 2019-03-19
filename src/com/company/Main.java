@@ -63,9 +63,9 @@ public class Main {
     }
 
     private static void informe() {
-        System.out.println("|-------------------------------------------|");
-        System.out.println("|\t \t \t \t INFORME                    |");
-        System.out.println("|-------------------------------------------|");
+        System.out.println("*-------------------------------------------------------------------*");
+        System.out.println("|\t \t \t \t \t \t INFORME                                           |");
+        System.out.println("*-------------------------------------------------------------------*");
         for(Clase c: clases){
             System.out.println("|CLASE  :" + c.getNombre());
             System.out.println("|HORARIO:" + c.getHorario());
@@ -75,14 +75,15 @@ public class Main {
                 System.out.println("Maestro: No Asignado");
             }
             for(Maestro asistente : c.getAsistente()){
-                System.out.println("Asistente: " + asistente.getNombre() + " " + asistente.getApellido());
+                System.out.println("ASISTENTE: " + asistente.getNombre() + " " + asistente.getApellido());
             }
-            System.out.println("----------------------------------------------------");
-            System.out.println("|   Estudiante    |\t\t\t\t|   No.Cuenta  |\t\t\t\t|  Es Oyente  |");
+            System.out.println("*-------------------------------------------------------------------*");
+            System.out.println("|   Estudiante    |\t\t\t|   No.Cuenta  |\t\t\t|  Es Oyente  |");
+            System.out.println("*-------------------------------------------------------------------*");
             int contEst = 0;
             int contAsi = 0;
             for(Estudiante est: c.getEstudiantes()){
-                System.out.print(est.getNombre() + "| " + est.getApellido() + "|\t\t\t|" + est.getNumCuenta() + "|\t\t\t|");
+                System.out.print(est.getNombre() + "| " + est.getApellido() + "\t\t\t|" + est.getNumCuenta() + "|\t\t\t|");
                 if(est.EsOyente()){
                     System.out.println("Si");
                     contAsi++;
@@ -106,7 +107,7 @@ public class Main {
 
         while (op != 4){
             System.out.println("|-------------------------------------------|");
-            System.out.println("|\t\t\t QUE DESEA HACER?                    |");
+            System.out.println("|\t\t\t QUE DESEA HACER?                |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|          1... Agregar Estudiante          |");
             System.out.println("|          2... Ver Estudiantes             |");
@@ -140,9 +141,11 @@ public class Main {
     }
 
     private static void matricularClase() {
-        System.out.println("------ESTUDIANTES------");
+        System.out.println("|-------------------------------------------|");
+        System.out.println("|               ESTUDIANTES            |");
+        System.out.println("|-------------------------------------------|");
         for(Estudiante est:estudiantes){
-            System.out.println("Nombre:" + est.getNombre()+" "+ est.getApellido()+"\t Numero Cuenta:"+ est.getNumCuenta());
+            System.out.println("|Nombre:" + est.getNombre()+" "+ est.getApellido()+"\t |Numero Cuenta:"+ est.getNumCuenta());
         }
 
         System.out.println("Ingrese el numero de cuenta del estudiante:");
@@ -377,7 +380,7 @@ public class Main {
         while (op != 3){
             System.out.println("\t");
             System.out.println("|-------------------------------------------|");
-            System.out.println("|\t\t\t QUE DESEA AGREGAR?              |");
+            System.out.println("|\t\t\t QUE DESEA AGREGAR?             |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|         1... Agregar Maestro              |");
             System.out.println("|         2... Ver Maestros                 |");
@@ -418,7 +421,7 @@ public class Main {
         nuevoM.setNombre(ent.next());
         System.out.println("INGRESE EL APELLIDO DEL MAESTRO:");
         nuevoM.setApellido(ent.next());
-        System.out.println(" INGRESE EL NUMERO DE ID DEL MAESTRO::");
+        System.out.println(" INGRESE EL ID DEL MAESTRO:");
         nuevoM.setIdentidad(ent.next());
         System.out.println(" INGRESE EL NUMERO DE REGISTRO DEL MAESTRO::");
         nuevoM.setNumEmpleado(ent.nextInt());

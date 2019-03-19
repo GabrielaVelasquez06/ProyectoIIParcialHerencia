@@ -63,11 +63,11 @@ public class Main {
 
     private static void informe() {
         System.out.println("*-------------------------------------------------------------------*");
-        System.out.println("|\t \t \t \t \t \t\t \t INFORME                          |");
+        System.out.println("|\t \t \t \t \t \t\t \t INFORME                            |");
         System.out.println("*-------------------------------------------------------------------*");
         for(Clase c: clases){
-            System.out.println("|CLASE  :" + c.getNombre());
-            System.out.println("|HORARIO:" + c.getHorario());
+            System.out.println("|CLASE  : " + c.getNombre());
+            System.out.println("|HORARIO: " + c.getHorario());
             if(c.getMaestro() != null){
                 System.out.println("|MAESTRO: " + c.getMaestro().getNombre() + " " + c.getMaestro().getApellido());
             }else{
@@ -77,12 +77,12 @@ public class Main {
                 System.out.println("|ASISTENTE: " + asistente.getNombre() + " " + asistente.getApellido());
             }
             System.out.println("*-------------------------------------------------------------------*");
-            System.out.println("|   ESTUDIANTE    |\t\t   No.CUENTA  |\t\t OYENTE                   |");
+            System.out.println("|   ESTUDIANTE    |\t\t   No.CUENTA  |\t\t OYENTE                 |");
             System.out.println("*-------------------------------------------------------------------*");
             int contEst = 0;
             int contAsi = 0;
             for(Estudiante est: c.getEstudiantes()){
-                System.out.print(est.getNombre() + "| " + est.getApellido() + "\t\t\t|" + est.getNumCuenta() + "|\t\t\t|");
+                System.out.print("|"+est.getNombre() + " " + est.getApellido() + "\t\t\t|" + est.getNumCuenta() + "|\t\t|");
                 if(est.EsOyente()){
                     System.out.println("SI");
                     contAsi++;
@@ -145,7 +145,8 @@ public class Main {
         System.out.println("|               ESTUDIANTES            |");
         System.out.println("|-------------------------------------------|");
         for(Estudiante est:estudiantes){
-            System.out.println("|Nombre:" + est.getNombre()+" "+ est.getApellido()+"\t |Numero Cuenta:"+ est.getNumCuenta());
+            System.out.println("" +
+                    "|Nombre:" + est.getNombre()+""+ est.getApellido()+"\t |Numero Cuenta:"+ est.getNumCuenta());
         }
 
         System.out.println("Ingrese el numero de cuenta del estudiante:");

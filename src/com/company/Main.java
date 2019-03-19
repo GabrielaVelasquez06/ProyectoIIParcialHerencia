@@ -17,19 +17,18 @@ public class Main {
         while (op != 5){
             System.out.println("|-------------------------------------------|");
             System.out.println("|\t \t \t \t BIENVENIDO                 |");
-            System.out.println("|-------------------------------------------|");
             System.out.println("|\t  UNIVERSIDAD JOSE CECILIO DEL VALLE    |");
             System.out.println("|\t\tDepartamento de Administracion      |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|\t\t\t QUE DESEA HACER?               |");
             System.out.println("|-------------------------------------------|");
-            System.out.println("|        1.... Clases                       |");
-            System.out.println("|        2.... Maestros                     |");
-            System.out.println("|        3.... Estudiantes                  |");
-            System.out.println("|        4.... Informe                      |");
-            System.out.println("|        5.... Salir                        |");
+            System.out.println("|       \t1.... Clases                    |");
+            System.out.println("|       \t2...  Maestros                  |");
+            System.out.println("|       \t3.... Estudiantes               |");
+            System.out.println("|       \t4.... Informe                   |");
+            System.out.println("|       \t5.... Salir                     |");
             System.out.println("|-------------------------------------------|");
-            System.out.println("|       Ingrese una opcion:                 |");
+            System.out.println("|           INGRESE UNA OPCION:             |");
             System.out.println("|-------------------------------------------|");
 
             op = ent.nextInt();
@@ -64,7 +63,7 @@ public class Main {
 
     private static void informe() {
         System.out.println("*-------------------------------------------------------------------*");
-        System.out.println("|\t \t \t \t \t \t INFORME                                           |");
+        System.out.println("|\t \t \t \t \t \t\t \t INFORME                          |");
         System.out.println("*-------------------------------------------------------------------*");
         for(Clase c: clases){
             System.out.println("|CLASE  :" + c.getNombre());
@@ -75,27 +74,28 @@ public class Main {
                 System.out.println("Maestro: No Asignado");
             }
             for(Maestro asistente : c.getAsistente()){
-                System.out.println("ASISTENTE: " + asistente.getNombre() + " " + asistente.getApellido());
+                System.out.println("|ASISTENTE: " + asistente.getNombre() + " " + asistente.getApellido());
             }
             System.out.println("*-------------------------------------------------------------------*");
-            System.out.println("|   Estudiante    |\t\t\t|   No.Cuenta  |\t\t\t|  Es Oyente  |");
+            System.out.println("|   ESTUDIANTE    |\t\t   No.CUENTA  |\t\t OYENTE                   |");
             System.out.println("*-------------------------------------------------------------------*");
             int contEst = 0;
             int contAsi = 0;
             for(Estudiante est: c.getEstudiantes()){
                 System.out.print(est.getNombre() + "| " + est.getApellido() + "\t\t\t|" + est.getNumCuenta() + "|\t\t\t|");
                 if(est.EsOyente()){
-                    System.out.println("Si");
+                    System.out.println("SI");
                     contAsi++;
                 }else
                 {
-                    System.out.println("No");
+                    System.out.println("NO");
                     contEst++;
                 }
 
             }
-            System.out.println("---------------------------------------------------");
-            System.out.println("Alumnos: " + contEst + "\t\tOyentes: " + contAsi + "\t\tAsistentes: " + c.getAsistente().size());
+            System.out.println("*-------------------------------------------------------------------*");
+            System.out.println("ESTUDIANTES: " + contEst + "\t\tOYENTES: " + contAsi + "\t\tASISTENTES: " + c.getAsistente().size());
+            System.out.println("*-------------------------------------------------------------------*");
             System.out.println("");
 
         }
@@ -162,7 +162,9 @@ public class Main {
             return;
         }
 
-        System.out.println("-------CLASES--------");
+        System.out.println("|-------------------------------------------|");
+        System.out.println("|                   CLASES               |");
+        System.out.println("|-------------------------------------------|");
 
         for (Clase c:clases){
             System.out.println(" NOMBRE DE LA CLASE:" + c.getNombre()+" HORARIO "+ c.getHorario()+" \t UNIDADES VALORATIVAS:"+ c.getUv());
@@ -257,9 +259,9 @@ public class Main {
 
     private static void AgregarAsistente() {
         for (Clase c:clases){
-            System.out.println(" Nombre Clase:" + c.getNombre()+" Horario "+ c.getHorario()+" \t Unidades Valorativas:"+ c.getUv());
+            System.out.println(" NOMBRE CLASE:" + c.getNombre()+" HORARIO "+ c.getHorario()+" \t UNIDADES VALORATIVAS:"+ c.getUv());
         }
-        System.out.println("Ingrese el nombre de la clase a la cual le quiere agregar el maestro:");
+        System.out.println("INGRESE EL NOMBRE DE LA CLASE A LA CUAL LE QUIERE AGREGAR MAESTRO:");
         String nomC;
         nomC = ent.next();
 
@@ -271,12 +273,12 @@ public class Main {
         }
         if( cm == null){
 
-            System.out.println("Clase no encontrada");
+            System.out.println("Clase NO ENCONTRADA!");
             return;
         }
 
         if(cm.getAsistente().size()>= 3){
-            System.out.println("Esta clase ya tiene el limite de asistentes maximo");
+            System.out.println("ESTA CLASE YA TIENE EL LIMITE DE ASISTENTES MAXIMOS");
             return;
         }
 
@@ -287,7 +289,7 @@ public class Main {
         }
 
 
-        System.out.println("Ingrese el numero de empleado del asistente ha asignar :");
+        System.out.println("INGRESE EL NUMERO DE EMPLEADO DE ASISTENTE A ASIGNAR :");
         int num = ent.nextInt();
 
         Maestro selec = null;
@@ -309,9 +311,9 @@ public class Main {
 
     private static void AgregarMaestroClase() {
         for (Clase c:clases){
-            System.out.println(" Nombre Clase:" + c.getNombre()+" Horario "+ c.getHorario()+" \t Unidades Valorativas:"+ c.getUv());
+            System.out.println(" NOMBRE DE CLASE:" + c.getNombre()+" HORARIO "+ c.getHorario()+" \t UNIDADES VALORATIVAS:"+ c.getUv());
         }
-        System.out.println("Ingrese el nombre de la clase a la cual le quiere agregar el maestro:");
+        System.out.println("INGRESE EL NOMBRE DE LA CLASE A LA CUAL LE AGREGARA MAESTRO:");
         String nomC;
         nomC = ent.next();
 
@@ -323,7 +325,7 @@ public class Main {
         }
         if( cm == null){
 
-            System.out.println("CLASE NO ENCONTRADA");
+            System.out.println("CLASE NO ENCONTRADA!");
             return;
         }
 
@@ -358,7 +360,7 @@ public class Main {
     }
     private static void verClases() {
         for (Clase c:clases){
-            System.out.println(" Nombre Clase:" + c.getNombre()+" Horario "+ c.getHorario()+" \t Unidades Valorativas:"+ c.getUv());
+            System.out.println(" NOMBRE CLASE:" + c.getNombre()+" HORARIO "+ c.getHorario()+" \t UNIDADES CALORATIVAS:"+ c.getUv());
         }
     }
     private static void agregarClases() {
@@ -410,7 +412,7 @@ public class Main {
     private static void verMaestros() {
 
         for (Maestro mast:maestros){
-            System.out.println("Nombre:" + mast.getNombre()+" "+ mast.getApellido()+"\t Numero Empleado:"+ mast.getNumEmpleado());
+            System.out.println("NOMBRE:" + mast.getNombre()+" "+ mast.getApellido()+"\t NUMERO DE EMPLEADO:"+ mast.getNumEmpleado());
         }
     }
     private static void agregarMaestro() {

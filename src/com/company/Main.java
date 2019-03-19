@@ -107,15 +107,15 @@ public class Main {
 
         while (op != 4){
             System.out.println("|-------------------------------------------|");
-            System.out.println("|\t\t\t QUE DESEA HACER?                |");
+            System.out.println("|\t\t\t QUE DESEA HACER?               |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|          1... Agregar Estudiante          |");
             System.out.println("|          2... Ver Estudiantes             |");
             System.out.println("|          3... Matricular Clases           |");
             System.out.println("|          4... Regresar                    |");
             System.out.println("|-------------------------------------------|");
-
-            System.out.println("Ingrese una opcion:");
+            System.out.println("|           INGRESE UNA OPCION:             |");
+            System.out.println("|-------------------------------------------|");
             op = ent.nextInt();
 
             switch (op){
@@ -230,7 +230,7 @@ public class Main {
             System.out.println("|         4... Agregar Asistente            |");
             System.out.println("|         5... Regresar                     |");
             System.out.println("|-------------------------------------------|");
-            System.out.println("|          Ingrese una opcion:              |");
+            System.out.println("|           INGRESE UNA OPCION:             |");
             System.out.println("|-------------------------------------------|");
             op = ent.nextInt();
 
@@ -388,9 +388,8 @@ public class Main {
             System.out.println("|         2... Ver Maestros                 |");
             System.out.println("|         3... Regresar                     |");
             System.out.println("|-------------------------------------------|");
-            System.out.println("|         Ingrese una opcion:               |");
+            System.out.println("|           INGRESE UNA OPCION:             |");
             System.out.println("|-------------------------------------------|");
-
 
             op = ent.nextInt();
 

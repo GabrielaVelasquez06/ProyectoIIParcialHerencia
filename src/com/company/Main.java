@@ -185,12 +185,6 @@ public class Main {
         cm.getEstudiantes().add(estu);
     }
 
-    private static void verEstudiantes() {
-
-        for(Estudiante est:estudiantes){
-            System.out.println("NOMBRE:" + est.getNombre()+" "+ est.getApellido()+"\t NUMERO DE CUENTA:"+ est.getNumCuenta());
-        }
-    }
 
     private static void agregarEstudiante() {
 
@@ -351,11 +345,7 @@ public class Main {
             return;
         }
         cm.setMaestro(selec);
-    }
-    private static void verClases() {
-        for (Clase c:clases){
-            System.out.println(" NOMBRE CLASE:" + c.getNombre()+" HORARIO "+ c.getHorario()+" \t UNIDADES CALORATIVAS:"+ c.getUv());
-        }
+
     }
     private static void agregarClases() {
 
@@ -397,12 +387,7 @@ public class Main {
 
         }
     }
-    private static void verMaestros() {
 
-        for (Maestro mast:maestros){
-            System.out.println("NOMBRE:" + mast.getNombre()+" "+ mast.getApellido()+"\t NUMERO DE EMPLEADO:"+ mast.getNumEmpleado());
-        }
-    }
     private static void agregarMaestro() {
 
         Maestro nuevoM = new Maestro();

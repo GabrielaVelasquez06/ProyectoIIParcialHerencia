@@ -25,7 +25,7 @@ public class Main {
             System.out.println("|       \t1.... Clases                    |");
             System.out.println("|       \t2...  Maestros                  |");
             System.out.println("|       \t3.... Estudiantes               |");
-            System.out.println("|       \t4.... Informe                   |");
+            System.out.println("|       \t4.... Registro                  |");
             System.out.println("|       \t5.... Salir                     |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|           INGRESE UNA OPCION:             |");
@@ -63,7 +63,7 @@ public class Main {
 
     private static void informe() {
         System.out.println("*-------------------------------------------------------------------*");
-        System.out.println("|\t \t \t \t \t \t\t \t INFORME                            |");
+        System.out.println("|\t \t \t \t \t \t\t 1 REGISTO DE MATRICULA                         |");
         System.out.println("*-------------------------------------------------------------------*");
         for(Clase c: clases){
             System.out.println("|CLASE  : " + c.getNombre());

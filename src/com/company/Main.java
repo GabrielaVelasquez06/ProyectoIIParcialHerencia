@@ -164,7 +164,7 @@ public class Main {
         }
 
         System.out.println("|-------------------------------------------|");
-        System.out.println("|                   CLASES               |");
+        System.out.println("|                  CLASES             |");
         System.out.println("|-------------------------------------------|");
 
         for (Clase c:clases){
@@ -279,7 +279,7 @@ public class Main {
         }
 
         if(cm.getAsistente().size()>= 3){
-            System.out.println("ESTA CLASE YA TIENE EL LIMITE DE ASISTENTES MAXIMOS");
+            System.out.println("******ESTA CLASE YA TIENE EL LIMITE DE ASISTENTES MAXIMOS******");
             return;
         }
 
@@ -331,7 +331,7 @@ public class Main {
         }
 
         if(cm.getMaestro() != null){
-            System.out.println("ESTA CLASE YA TIENE MESTRO ASIGNADO ");
+            System.out.println("******ESTA CLASE YA TIENE MESTRO ASIGNADO******");
             return;
         }
 

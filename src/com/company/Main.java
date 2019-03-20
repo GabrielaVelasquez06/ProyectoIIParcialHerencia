@@ -105,14 +105,13 @@ public class Main {
 
         int op = 0;
 
-        while (op != 4){
+        while (op != 3){
             System.out.println("|-------------------------------------------|");
             System.out.println("|\t\t\t QUE DESEA HACER?               |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|          1... Agregar Estudiante          |");
-            System.out.println("|          2... Ver Estudiantes             |");
-            System.out.println("|          3... Matricular Clases           |");
-            System.out.println("|          4... Regresar                    |");
+            System.out.println("|          2... Matricular Clases           |");
+            System.out.println("|          3... Regresar                    |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|           INGRESE UNA OPCION:             |");
             System.out.println("|-------------------------------------------|");
@@ -126,10 +125,6 @@ public class Main {
                     break;
 
                 case 2:
-                    verEstudiantes();
-                    break;
-
-                case 3:
                     matricularClase();
                     break;
 
@@ -220,16 +215,15 @@ public class Main {
     private static void menuClase() {
         int op = 0;
 
-        while (op != 5){
+        while (op != 4){
             System.out.println("\t");
             System.out.println("|-------------------------------------------|");
             System.out.println("|\t\t\t QUE DESEA AGREGAR?             |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|         1... Agregar Clases               |");
-            System.out.println("|         2... Ver Clases                   |");
-            System.out.println("|         3... Agregar Maestro              |");
-            System.out.println("|         4... Agregar Asistente            |");
-            System.out.println("|         5... Regresar                     |");
+            System.out.println("|         2... Agregar Maestro              |");
+            System.out.println("|         3... Agregar Asistente            |");
+            System.out.println("|         4... Regresar                     |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|           INGRESE UNA OPCION:             |");
             System.out.println("|-------------------------------------------|");
@@ -243,15 +237,14 @@ public class Main {
                     break;
 
                 case 2:
-                    verClases();
+                    AgregarMaestroClase();
                     break;
+
 
                 case 3:
-                  AgregarMaestroClase();
-                    break;
-
-                case 4:
                     AgregarAsistente();
+
+
             }
 
         }
@@ -380,14 +373,13 @@ public class Main {
 
         int op = 0;
 
-        while (op != 3){
+        while (op != 2){
             System.out.println("\t");
             System.out.println("|-------------------------------------------|");
             System.out.println("|\t\t\t QUE DESEA AGREGAR?             |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|         1... Agregar Maestro              |");
-            System.out.println("|         2... Ver Maestros                 |");
-            System.out.println("|         3... Regresar                     |");
+            System.out.println("|         2... Regresar                     |");
             System.out.println("|-------------------------------------------|");
             System.out.println("|           INGRESE UNA OPCION:             |");
             System.out.println("|-------------------------------------------|");
@@ -399,10 +391,6 @@ public class Main {
                 case 1:
 
                    agregarMaestro();
-                    break;
-
-                case 2:
-                     verMaestros();
                     break;
 
             }

@@ -77,7 +77,7 @@ public class Main {
                 System.out.println("|ASISTENTE: " + asistente.getNombre() + " " + asistente.getApellido());
             }
             System.out.println("*-------------------------------------------------------------------*");
-            System.out.println("|   ESTUDIANTE    |\t\t   No.CUENTA  |\t\t OYENTE                 |");
+            System.out.println("|   ESTUDIANTE        |\t      No.CUENTA     |\t\t  OYENTE        |");
             System.out.println("*-------------------------------------------------------------------*");
             int contEst = 0;
             int contAsi = 0;
@@ -94,7 +94,7 @@ public class Main {
 
             }
             System.out.println("*-------------------------------------------------------------------*");
-            System.out.println("ESTUDIANTES: " + contEst + "\t\tOYENTES: " + contAsi + "\t\tASISTENTES: " + c.getAsistente().size());
+            System.out.println("|\tESTUDIANTES: " + contEst + "\t |      OYENTES: " + contAsi + "\t\t|       ASISTENTES: " + c.getAsistente().size());
             System.out.println("*-------------------------------------------------------------------*");
             System.out.println("");
 
@@ -142,7 +142,7 @@ public class Main {
 
     private static void matricularClase() {
         System.out.println("|-------------------------------------------|");
-        System.out.println("|               ESTUDIANTES            |");
+        System.out.println("|             \t\tESTUDIANTES          |");
         System.out.println("|-------------------------------------------|");
         for(Estudiante est:estudiantes){
             System.out.println("" +
@@ -164,7 +164,7 @@ public class Main {
         }
 
         System.out.println("|-------------------------------------------|");
-        System.out.println("|                  CLASES             |");
+        System.out.println("|                  \t\tCLASES             |");
         System.out.println("|-------------------------------------------|");
 
         for (Clase c:clases){
